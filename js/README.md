@@ -8,7 +8,8 @@ function resolve(dir) {
 }
 
 const devServerOption = {
-    /* 详情配置网址  https://webpack.js.org/configuration/dev-server */
+    /* 详情配置网址*/
+    [https://webpack.js.org/configuration/dev-server ]
     open: true,  // 自动打开浏览器页面
     hot: true,  //热更新,实时更新
     host: '0,0,0,0', // 默认是 localhost, 0.0.0.0可以被其他电脑访问，以ip形式出现

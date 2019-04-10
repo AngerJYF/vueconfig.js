@@ -1,5 +1,7 @@
-``` javascript 
- 
+``` javascript
+
+### vue-cli 3.0+ 中 vue.config.js 常用配置项（自己总结，不喜勿喷！）
+
 const path = require('path');
 function resolve(dir) {
     return path.join(__dirname, dir)

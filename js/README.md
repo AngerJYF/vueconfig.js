@@ -8,8 +8,9 @@ function resolve(dir) {
 }
 
 const devServerOption = {
-    /* 详情配置网址*/
-    [https://webpack.js.org/configuration/dev-server ]
+
+    /* 详情配置网址 https://webpack.js.org/configuration/dev-server */
+  
     open: true,  // 自动打开浏览器页面
     hot: true,  //热更新,实时更新
     host: '0,0,0,0', // 默认是 localhost, 0.0.0.0可以被其他电脑访问，以ip形式出现
@@ -18,7 +19,9 @@ const devServerOption = {
     inline: true, //开启页面自动刷新
     //lazy: false, //不启动懒加载
     //progress: true, //显示打包的进度
+    
     //开发环境 API 服务器 (代理服务器) 配置
+    
     devServer: {
         // proxy: 'http://localhost:4000', // devServer.proxy 可以是一个指向开发环境 API 服务器的字符串
         proxy: {   // proxy 代理

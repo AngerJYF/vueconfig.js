@@ -1,33 +1,40 @@
-``` javascript 
- 
+### vue-cli 3.0+ 中 vue.config.js 常用配置项（自己总结，不喜勿喷！）
+
+``` javascript
+
 const path = require('path');
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
 const devServerOption = {
-    /* 详情配置网址  https://webpack.js.org/configuration/dev-server */
+
+    /* 详情配置网址 https://webpack.js.org/configuration/dev-server */
+  
     open: true,  // 自动打开浏览器页面
     hot: true,  //热更新,实时更新
-    host: '0,0,0,0', // 默认是 localhost, 0.0.0.0可以被其他电脑访问，以ip形式出现
-    port: 9999,  // 端口地址
+    host: '0.0.0.0', // 默认是 localhost, 0.0.0.0可以被其他电脑访问，以ip形式出现
+    port: 8020,  // 端口地址
     https: false,  //使用 https 提供服务
     inline: true, //开启页面自动刷新
     //lazy: false, //不启动懒加载
     //progress: true, //显示打包的进度
+    
     //开发环境 API 服务器 (代理服务器) 配置
-    devServer: {
-        // proxy: 'http://localhost:4000', // devServer.proxy 可以是一个指向开发环境 API 服务器的字符串
-        proxy: {   // proxy 代理
-            '/api': {
-                target: 'url',  // 发环境 API 服务器 (后端服务器接口域名)
-                //secure: false, //如果是https接口，需要配置这个参数
-                ws: true, // proxy websockets
-                changeOrigin: true, //如果接口跨域，需要进行这个参数配置
-                pathRewrite: {  // 路径重写
-                    '^/api/old-path': '/api/new-path', // rewrite path
-                },
-            },
+    // proxy: 'http://localhost:4000', 
+    // devServer.proxy 可以是一个指向开发环境 API 服务器的字符串
+
+    ### 注意：需修改成自己实际开发的 ['/api','url','pathRewrite']
+
+    proxy: {   // proxy 代理
+        '/api': { 
+            target: 'url',  // 发环境 API 服务器 (后端服务器接口域名)                   
+            //secure: false, //如果是https接口，需要配置这个参数
+            ws: true, // proxy websockets
+            changeOrigin: true, //如果接口跨域，需要进行这个参数配置
+            pathRewrite: {  // 路径重写
+                '^/api/old-path': '/api/new-path', // rewrite path
+            }
         }
     },
 

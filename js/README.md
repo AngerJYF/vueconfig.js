@@ -40,7 +40,7 @@ module.exports = {
     outputDir: 'dist',
     // 3. 配置代理、端口等配置操作
     devServer: devServerOption,
-    // 4. 路径别名配置
+    // 4. 路径别名配置  参考网址[ https://www.jianshu.com/p/e4716e5bc8bb ]
     chainWebpack: (config) => {
         config.resolve.alias
             .set('@', resolve('src'))
